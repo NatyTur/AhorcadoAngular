@@ -1,0 +1,21 @@
+<div class="container">
+    <div style="text-align:center">
+        <h1>{{ title }}</h1><h1>{{ mascara }}</h1><h2>{{ mensaje }}</h2>
+
+        <img
+            width="300"
+            alt="image"
+            src={{vidaImagen}}
+        >
+    </div>
+
+    <h2 style="text-align:center" >Ingrese una letra</h2>
+
+    <div style="text-align:center" id="cuadro">            
+        <input id="letra" style="width: 13px; font-weight:bold" type="text"  maxlength="1" #letra/>
+        <br/><br/>
+        <input type="button" value="Probar suerte!!" (click)="probarSuerte(letra.value); letra.value='';"/>
+        <br/><br/>
+        <input type="button" value="Reiniciar Juego" (click)="reiniciarJuego()"/>
+    </div>
+</div>

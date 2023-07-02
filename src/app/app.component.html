@@ -1,0 +1,7 @@
+<!-- <a>La etapa actual es: {{etapa}}</a> -->
+<div *ngIf="etapa==1">
+    <app-ingreso-palabra [etapaIn]="etapa" (etapaOut)="CambiaEtapa($event)" (palabraOut)="IngresaPalabra($event)"></app-ingreso-palabra>
+</div>
+<div *ngIf="etapa==2">
+    <app-juego [palabraIn]="palabra" (etapaOut)="CambiaEtapa($event)"></app-juego>
+</div>
